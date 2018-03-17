@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 
-class HomePage extends Component {
+class ProjectsPage extends Component {
   render() {
     return (
         <div className="wrap">
 
             <h1>
-                <b>denuu</b>
+                Projects
             </h1>
-            <h1>
-                <b>develop with style</b>
-            </h1>
+
+            <p>
+                Things I've worked on.
+            </p>
 
         </div>
     );
   }
 }
 
-export default HomePage;
+export default ProjectsPage;
