@@ -17,6 +17,8 @@ $white: #ffffff;
 $lightGrey: #e6e6e6;
 $darkGrey: #333;
 $red: #ff1755;
+$teal: #34D9C3;
+$dark: #232526;
 
 /* Fonts */
 
@@ -25,9 +27,10 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
-    color: $black;
     font-weight: 400;
     font-style: normal;
+    background: $teal;
+    color: $dark;
 }
 
 a {

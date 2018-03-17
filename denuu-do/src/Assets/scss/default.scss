@@ -4,8 +4,8 @@ header {
     position: relative;
     display: block;
     width: 100%;
-    background: $black;
-    color: $white;
+    background: $teal;
+    color: $dark;
     height: 90px;
 
     .logo {
@@ -38,8 +38,41 @@ header {
             a {
                 font-size: 1.2em;
                 line-height: normal;
-                color: $white;
+                color: $dark;
             }
         }
     }
 }
+
+.homePage {
+    h1 {
+        color: #34D9C3;
+        font-size: 10em;
+        text-align: center;
+        text-shadow: 0 6px 8.896px #2b5953, 0 -2px 1px #09eacc;
+        padding: 0;
+        margin: 0;
+    }
+    h4 {
+        color: #232526;
+        font-size: 0.6em;
+        font-weight: 400;
+        opacity: 0.5;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+// #homeBanner {
+//     padding: 0;
+//     margin: 0;
+//     width: 100vw;
+//     height: calc(100vw - 400px);
+// }
+//
+// #homeBanner h1 {
+//     position: absolute;
+//     top: 50vh;
+//     left: 50vw;
+//     transform: translate(-50%, -50%);
+// }
