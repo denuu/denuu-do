@@ -3,14 +3,13 @@ import React, { Component } from 'react';
 class HomePage extends Component {
   render() {
     return (
-        <div className="homePage">
+        <div className="homePage page">
 
-            <h1>
-                <b>denuu</b>
-            </h1>
-            <h4>
-                <b>develop with style</b>
-            </h4>
+            <div className="title">
+                <h1>
+                    <b>denuu</b>
+                </h1>
+            </div>
 
         </div>
     );

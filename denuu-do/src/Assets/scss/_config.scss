@@ -11,14 +11,25 @@
     transition:$e;
 }
 
+@mixin verticalAlign {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
 /* Vars */
 $black: #010000;
-$white: #ffffff;
+$white: #ffffef;
 $lightGrey: #e6e6e6;
 $darkGrey: #333;
 $red: #ff1755;
 $teal: #34D9C3;
 $dark: #232526;
+$purple: #7715D0;
+$darkPurple: #1B0329;
+$reactBlue: #60DAFA;
 
 /* Fonts */
 

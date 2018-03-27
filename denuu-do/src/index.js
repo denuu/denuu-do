@@ -3,5 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+export { default } from './Components/elements/progressBar.js';
+
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();

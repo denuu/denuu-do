@@ -1,18 +1,20 @@
 @import "_config.scss";
 
+/*
+██    ██ ███    ██ ██ ██    ██ ███████ ██████  ███████  █████  ██
+██    ██ ████   ██ ██ ██    ██ ██      ██   ██ ██      ██   ██ ██
+██    ██ ██ ██  ██ ██ ██    ██ █████   ██████  ███████ ███████ ██
+██    ██ ██  ██ ██ ██  ██  ██  ██      ██   ██      ██ ██   ██ ██
+ ██████  ██   ████ ██   ████   ███████ ██   ██ ███████ ██   ██ ███████
+*/
 header {
     position: relative;
     display: block;
     width: 100%;
-    background: $teal;
-    color: $dark;
-    height: 90px;
-
-    .logo {
-        position: absolute;
-        top: 50%; left: 15px;
-        @include translateY(-50%);
-    }
+    height: 4em;
+    background: $darkPurple;
+    color: $white;
+    text-align: center;
 
     nav,
     nav ul
@@ -22,57 +24,121 @@ header {
     }
 
     nav {
-        position: absolute;
-        top: 50%; right: 15px;
-        @include translateY(-50%);
+        z-index: 99;
+        position: fixed;
+        width: 100vw;
+        height: calc(100vh - 8em);
+        background: $darkPurple;
 
-        ul li {
-            list-style-type: none;
-            display: inline-block;
-            margin-right: 20px;
+        ul {
+            @include verticalAlign;
+            text-align: center;
 
-            &.last {
-                margin: 0;
+            li {
+                list-style-type: none;
+                // display: inline-block;
+                font-size: 1.7em;
+                margin: 1em;
+                margin-right: 20px;
+
+                &.last {
+                    margin: 0;
+                }
+
+                a {
+                    font-size: 1.2em;
+                    line-height: normal;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 600;
+                    color: $white;
+                }
             }
 
-            a {
-                font-size: 1.2em;
-                line-height: normal;
-                color: $dark;
-            }
+        }
+
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.App {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: $purple;
+}
+
+.page {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 4em);
+}
+
+.card {
+    margin: 1em;
+    background: $darkPurple;
+    color: $white;
+    border-radius: 3px;
+    padding: 0.5em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // 2 for mobile!
+    grid-gap: 0.5em;
+    grid-auto-rows: minmax(50px, auto);
+
+    .grid-block {
+        display: inline-flex;
+        svg {
+            height: 3em;
         }
     }
 }
 
-.homePage {
-    h1 {
-        color: #34D9C3;
-        font-size: 10em;
-        text-align: center;
-        text-shadow: 0 6px 8.896px #2b5953, 0 -2px 1px #09eacc;
-        padding: 0;
-        margin: 0;
-    }
-    h4 {
-        color: #232526;
-        font-size: 0.6em;
-        font-weight: 400;
-        opacity: 0.5;
-        padding: 0;
-        margin: 0;
+.btn {
+    padding: 0.5em;
+    font-size: 1em;
+    background-color: $darkPurple;
+    color: $white;
+    border: 1px solid $purple;
+    border-radius: 2px;
+    outline: none;
+}
+
+.progress {
+    width: 100%;
+    .bar {
+        @include verticalAlign;
+        margin: 0 0.5em 0 0.5em;
+        border-radius: 2px;
     }
 }
 
-// #homeBanner {
-//     padding: 0;
-//     margin: 0;
-//     width: 100vw;
-//     height: calc(100vw - 400px);
-// }
-//
-// #homeBanner h1 {
-//     position: absolute;
-//     top: 50vh;
-//     left: 50vw;
-//     transform: translate(-50%, -50%);
-// }
+/*
+██   ██  ██████  ███    ███ ███████     ██████   █████   ██████  ███████
+██   ██ ██    ██ ████  ████ ██          ██   ██ ██   ██ ██       ██
+███████ ██    ██ ██ ████ ██ █████       ██████  ███████ ██   ███ █████
+██   ██ ██    ██ ██  ██  ██ ██          ██      ██   ██ ██    ██ ██
+██   ██  ██████  ██      ██ ███████     ██      ██   ██  ██████  ███████
+*/
+.homePage {
+
+    .title {
+        @include verticalAlign;
+
+        h1 {
+            color: $white;
+            font-size: 4em;
+            text-align: center;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+}
